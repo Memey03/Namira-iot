@@ -21,7 +21,7 @@ export function useVoiceControl(
     
     if (SpeechRecognition) {
       const recognition = new SpeechRecognition();
-      recognition.continuous = false;
+      recognition.continuous = true;
       recognition.interimResults = false;
       recognition.lang = 'id-ID'; // Indonesian as per requested commands
 
