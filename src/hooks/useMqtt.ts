@@ -32,9 +32,14 @@ export function useMqtt() {
         url: window.location.protocol === 'https:' ? 'wss://test.mosquitto.org:8081' : 'ws://test.mosquitto.org:9001',
       },
       {
-        id: 'mqttcool' as const,
-        url: window.location.protocol === 'https:' ? 'wss://broker.mqtt.cool:8083/mqtt' : 'ws://broker.mqtt.cool:9001',
-      },
+{
+  id: 'mqttcool' as const,
+  url: 'wss://public.cloud.shiftr.io:443',
+  options: {
+    username: 'public',
+    password: 'public',
+  },
+},
       {
         id: 'flespi' as const,
         url: window.location.protocol === 'https:' ? 'wss://mqtt.flespi.io:443' : 'ws://mqtt.flespi.io:80',
